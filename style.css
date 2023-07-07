@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.s1 {
+    width: 30%;
+    height: 100vh;
+    position: relative;
+    background: url("./images/bg-main-desktop.png");
+}
+
+.s1 .card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card .front,
+.card .back {
+    width: 400px;
+}
+
+.card .front img,
+.card .back img {
+    width: 100%;
+}
+
+.card .front {
+    position: relative;
+    left: 30%;
+    transform: translateX(-50%);
+}
+
+.front .content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+}
+.front .content .circle{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.front .content .circle .big{
+    width: 50px;
+    height: 50px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+    background: hsl(0, 0%, 100%);
+}
+.front .content .circle .small{
+    width: 20px;
+    height: 20px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+.front .content .number{
+    display: flex;
+    justify-content: flex-start;
+    color: hsl(0, 0%, 100%);
+}
+.front .content .number p {
+    font-size: 1.9rem;
+}
+
+.front .content .card-detail {
+    display: flex;
+    justify-content: space-between;
+    color: hsl(0, 0%, 100%);
+    user-select: none;
+}
+
+.front .content .card-detail p {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.card .back {
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.back .content{
+    position: absolute;
+    top: 43%;
+    right: 13%;
+    
+}
+
+.back .content p{
+    color: white;
+}
+
+.s2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+}
+
+.s2 .form {
+    max-width: 370px;
+    width: 100%;
+}
+
+.form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1.3rem;
+}
+
+.form form .form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form form .form-input:nth-child(3) {
+    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.form form .form-input .date {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.form form .form-input:nth-child(3) {
+    gap: 1rem;
+}
+
+.form-input input {
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    border: 1px solid hsl(270, 3%, 87%);
+    font-size: 1.1rem;
+}
+
+.form-input input:focus {
+    outline: none;
+    border: 1px solid hsl(278, 94%, 30%);
+}
+
+.form-input input::placeholder {
+    color: hsl(270, 3%, 87%);
+    user-select: none;
+}
+
+.date input {
+    width: 100%;
+}
+
+.cvc input {
+    width: 100%;
+}
+.form-input label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.form-input:nth-child(3) input {
+    margin-top: 5px;
+}
+.form-input button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.form-input span {
+    display: none;
+    font-size: 13px;
+    margin: 8px 0;
+    color: hsl(0, 100%, 66%);
+}
+
+.form-input span.active {
+    display: block;
+}
+
+.s2 .message {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .card .front,
+    .card .back {
+        width: 350px;
+        transform: translateY(-50%, -50%);
+    }
+
+    .front .content .number p {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .s1 {
+        width: 100%;
+        height: 40vh;
+        background: url("./images/bg-main-mobile.png") no-repeat cover center;
+    }
+
+    .s1 > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+    }
+
+    .s1 .card {
+        position: relative;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .card .front,
+    .card .back {
+        width: 300px;
+        transform: translateY(-50%, -50%);
+    }
+
+    .card .front img,
+    .card .back img {
+        width: 100%;
+    }
+
+    .card .front {
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        transform: translate(-60%, 5%);
+        z-index: 1;
+    }
+    .front .content {
+        padding: 0.5rem 1rem;
+    }
+
+    .front .content .number p {
+        font-size: 1.5rem;
+    }
+    
+    .card .back {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+    .s2 {
+        width: 100%;
+        height: 60vh;
+    }
+}

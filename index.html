@@ -52,7 +52,7 @@
                   <p>Jane Appleseed</p>
                 </div>
                 <div class="date">
-                  <p>00/00</p>
+                  <span class="month">00</span>/<span class="year">00</span>
                 </div>
               </div>
             </div>
@@ -76,8 +76,8 @@
           </div>
           <div class="form-input">
             <label class="label" for="card_number">Card Number</label>
-            <input type="text" id="card_number" maxlength="16" name="card_number"
-              placeholder="e.g. 1234 5678 9123 0000">
+            <input type="tel" id="card_number" maxlength="19" max="17" name="card_number"
+              placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" pattern="[0-9\s]{13,19}">
             <span>Can't be blank</span>
           </div>
           <div class="form-input">
@@ -85,11 +85,11 @@
               <label class="label" for="date">Exp. Date (MM/YY)</label>
               <div class="date">
                 <div>
-                  <input type="text" id="month" name="month" placeholder="MM">
+                  <input type="text" id="month" maxlength="2" name="month" placeholder="MM">
                   <span>Can't be blank</span>
                 </div>
                 <div>
-                  <input type="text" id="year" name="year" placeholder="YY">
+                  <input type="text" id="year" maxlength="2" name="year" placeholder="YY">
                   <span>Can't be blank</span>
                 </div>
 
@@ -97,7 +97,7 @@
             </div>
             <div class="cvc">
               <label class="label" for="cvc">CVC</label>
-              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123">
+              <input type="text" id="cvc" name="cvc" minlength="3" maxlength="3" placeholder="e.g. 123">
               <span>Can't be blank</span>
 
             </div>
@@ -125,6 +125,7 @@
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/chinyereunamba" target="_blank">Chinyere Unamba</a>.
       </div> -->
+      <script src="./script.js"></script>
     </section>
   </main>
 </body>
